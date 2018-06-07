@@ -1,7 +1,7 @@
 {
-  "name": "context-observable2",
+  "name": "context-observable",
   "version": "1.0.0",
-  "description": "context-observable2 React component",
+  "description": "Context-Observable Component manages the state of your React App using new React Context Api following same interfaces of Redux (actions and reducers) and using the same idea behind redux-observable to avoid side-effect",
   "main": "lib/index.js",
   "module": "es/index.js",
   "files": [

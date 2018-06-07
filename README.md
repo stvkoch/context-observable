@@ -13,7 +13,8 @@
 [coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
 [coveralls]: https://coveralls.io/github/user/repo
 
-Context-Observable manager the state of you React App follow same interface of Redux (actions and reducers) and use same ideia behind redux-observable to avoid "side-effect".
+Context-Observable Component manages the state of your React App using new React Context Api following same interfaces of Redux (actions and reducers) and using the same idea behind redux-observable to avoid "side-effect".
+ 
 
 ### Dependencies
 

@@ -30,11 +30,17 @@ Context-Observable Component manages the state of your React App using new React
 
 Via npm
 
-`npm install --save context-observable
+```
+npm install --save context-observable
+```
+
 
 Via UMD (to use as jsbin, etc..)
 
-`https://raw.githubusercontent.com/stvkoch/context-observable/master/umd/context-observable.js
+```
+https://raw.githubusercontent.com/stvkoch/context-observable/master/umd/context-observable.js
+```
+
 
 ## Run Demo
 

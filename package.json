@@ -1,0 +1,32 @@
+{
+  "name": "context-observable",
+  "version": "0.1.0",
+  "description": "Use same interface found in redux and redux-observable to manager app state via new React Context Api",
+  "keywords": ["redux", "rxjs", "redux-observable", "reactjs", "react", "reactive", "observable", "state manager"],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.3.2",
+    "rxjs": "5.5.11"
+  },
+  "devDependencies": {
+    "react-dom": "16.3.2",
+    "react-scripts": "1.1.4",
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/stvkoch/context-observable.git"
+  },
+  "author": "Steven Koch <stevenk@agap2.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stvkoch/context-observable/issues"
+  },
+  "homepage": "https://github.com/stvkoch/context-observable#readme"
+}

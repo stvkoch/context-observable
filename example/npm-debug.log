@@ -1,0 +1,26 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'link',
+1 verbose cli   'context-observable/combine-reducers' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose stack Error: Argument #2: Expected array but got string
+4 verbose stack     at EventEmitter.install (/usr/share/npm/lib/install.js:175:3)
+4 verbose stack     at Object.commandCache.(anonymous function) (/usr/share/npm/lib/npm.js:216:13)
+4 verbose stack     at /usr/share/npm/lib/link.js:89:24
+4 verbose stack     at FSReqWrap.oncomplete (fs.js:152:21)
+5 verbose cwd /home/skoch/Downloads/context-observable/example
+6 error Linux 4.15.0-22-generic
+7 error argv "/usr/bin/node" "/usr/bin/npm" "link" "context-observable/combine-reducers"
+8 error node v8.10.0
+9 error npm  v3.5.2
+10 error code EINVALIDTYPE
+11 error typeerror Error: Argument #2: Expected array but got string
+11 error typeerror     at EventEmitter.install (/usr/share/npm/lib/install.js:175:3)
+11 error typeerror     at Object.commandCache.(anonymous function) (/usr/share/npm/lib/npm.js:216:13)
+11 error typeerror     at /usr/share/npm/lib/link.js:89:24
+11 error typeerror     at FSReqWrap.oncomplete (fs.js:152:21)
+12 error typeerror This is an error with npm itself. Please report this error at:
+12 error typeerror     <http://github.com/npm/npm/issues>
+13 verbose exit [ 1, true ]

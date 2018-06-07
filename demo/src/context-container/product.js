@@ -1,6 +1,8 @@
 import React from "react";
-import { Consumer } from "../../src";
+
 import { addProduct, rmProduct } from "../actions/product";
+
+import { Consumer } from "../../../src";
 
 export default function Product(props) {
   const showProductName = product => product && <h1>{product.name}</h1>;

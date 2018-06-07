@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
-import Product from "./context-container/product";
+import {combineReducers, Consumer, ContextObservable} from '../../src'
 
-import { ContextObservable } from "../src/index";
-import combineReducers from "../src/combine-reducers";
+import Product from "./context-container/product";
 
 import epics from "./epics";
 import product from "./reducers/product";
 import products from "./reducers/products";
+
 
 const reducer = combineReducers({
   product,
@@ -20,4 +20,4 @@ const App = () => (
   </ContextObservable>
 );
 
-render(<App />, document.getElementById("root"));
+render(<App />, document.getElementById("demo"));

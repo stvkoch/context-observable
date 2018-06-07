@@ -1,5 +1,5 @@
 /*!
- * context-observable2 v1.0.0
+ * context-observable v1.0.0
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {

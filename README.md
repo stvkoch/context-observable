@@ -21,17 +21,26 @@ Context-Observable Component manages the state of your React App using new React
 - React v16.3 (https://reactjs.org/)
 - Rxjs 5 (http://reactivex.io/rxjs)
 
+
 ## What you need to manager the state of your app?
 
-As a redux, you will need create reducers and actions
+As a redux, you will need create reducers and actions.
 
 
 ## What you need to avoid "side-effect"?
 
-Context-Observable follow same ideia behind redux-observable, so what you will need is create your epics the same way that you do in redux-observable.
+Context-Observable following same ideia behind redux-observable, so what you will need is create your epics the same way that you already do in redux-observable.
 
 
 ## How I setup Context-Observable?
+
+First all you need install Context-Observable.
+
+`npm install --save context-observable
+
+
+Then you import Context-Observable Component and pass your epics and reducers.
+
 
 ```
 import { ContextObservable } from "context-observable";
@@ -46,7 +55,8 @@ const App = () => (
 );
 ```
 
-## How you dispatch action to epics and to reducers?
+
+## How you dispatch actions to epics and to reducers?
 
 ```
 import {Consumer} from 'context-observable';
@@ -69,3 +79,5 @@ import {Consumer} from 'context-observable';
     )}
   </Consumer>
 ```
+
+

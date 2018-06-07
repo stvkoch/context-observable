@@ -5,7 +5,8 @@ module.exports = {
     umd: {
       global: 'RxContextObservable',
       externals: {
-        react: 'React'
+        react: 'React',
+        rxjs: 'Rx'
       }
     }
   }

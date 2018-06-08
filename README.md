@@ -50,13 +50,13 @@ cd context-observable
 npm start
 ```
 
-## What you need to manager the state of your app?
+## What you need to manages the state of your app?
 
 As a redux, you will need create reducers and actions.
 
 ## What you need to avoid "side-effect"?
 
-Context-Observable following same ideia behind redux-observable, so what you will need is create your epics the same way that you already do in redux-observable.
+Context-Observable follow same ideia behind redux-observable, so what you will need is create your epics the same way that you already do in redux-observable.
 
 ## How I setup Context-Observable?
 

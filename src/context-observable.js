@@ -14,7 +14,7 @@ const { Provider, Consumer } = Context;
 class ContextObservable extends React.Component {
   constructor(props) {
     super(props);
-    this.state = props.reducer(undefined, {});
+    this.state = props.reducer(props.initialState, {});
 
     this.rx = new Subject().switchMap(payload =>
       Observable.merge(
@@ -24,17 +24,24 @@ class ContextObservable extends React.Component {
 
     this.rx.subscribe(a => {
       const newState = this.props.reducer(this.state, a);
-      this.setState(newState);
+      this.setState(newState, this.props.onSetState);
     });
   }
 
-  dispatch = action => this.rx.next({ action, store: this.store });
+  dispatch = action => {
+    this.rx.next({ action, store: this.store });
+  };
+
   getState = () => this.state;
+
   store = { getState: this.getState, dispatch: this.dispatch };
 
   render() {
     return (
-      <Provider value={{ state: this.state, dispatch: this.dispatch }}>
+      <Provider
+        contextObservable
+        value={{ state: this.state, dispatch: this.dispatch }}
+      >
         {this.props.children}
       </Provider>
     );
@@ -42,7 +49,7 @@ class ContextObservable extends React.Component {
 }
 
 ContextObservable.defaultProps = {
-  epics: [],
+  epics: [$a => $a],
   reducer: state => state
 };
 

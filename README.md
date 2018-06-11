@@ -2,14 +2,12 @@
 
 [![Travis][build-badge]][build]
 [![npm package][npm-badge]][npm]
-[![Coveralls][coveralls-badge]][coveralls]
+[![Coverage Status](https://coveralls.io/repos/github/stvkoch/context-observable/badge.svg?branch=master)](https://coveralls.io/github/stvkoch/context-observable?branch=master)
 
-[build-badge]: https://img.shields.io/travis/user/repo/master.png?style=flat-square
-[build]: https://travis-ci.org/user/repo
-[npm-badge]: https://img.shields.io/npm/v/npm-package.png?style=flat-square
-[npm]: https://www.npmjs.org/package/npm-package
-[coveralls-badge]: https://img.shields.io/coveralls/user/repo/master.png?style=flat-square
-[coveralls]: https://coveralls.io/github/user/repo
+[build-badge]: https://travis-ci.org/stvkoch/context-observable.svg?branch=master
+[build]: https://travis-ci.org/stvkoch/context-observable
+[npm-badge]: https://img.shields.io/npm/v/context-observable.png?style=flat-square
+[npm]: https://www.npmjs.com/package/context-observable
 [context-observable-component]: https://raw.githubusercontent.com/stvkoch/context-observable/master/context-observable-component.png
 
 

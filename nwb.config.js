@@ -9,5 +9,8 @@ module.exports = {
         rxjs: 'Rx'
       }
     }
+  },
+  karma: {
+    testContext: 'tests-run-before.js'
   }
-}
+};

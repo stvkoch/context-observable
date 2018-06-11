@@ -1,5 +1,5 @@
 /*!
- * context-observable v0.1.0
+ * context-observable v1.0.2
  * MIT Licensed
  */
 (function webpackUniversalModuleDefinition(root, factory) {
@@ -141,7 +141,7 @@ var ContextObservable = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
 
     _this.dispatch = function (action) {
-      return _this.rx.next({ action: action, store: _this.store });
+      _this.rx.next({ action: action, store: _this.store });
     };
 
     _this.getState = function () {
@@ -150,7 +150,7 @@ var ContextObservable = function (_React$Component) {
 
     _this.store = { getState: _this.getState, dispatch: _this.dispatch };
 
-    _this.state = props.reducer(undefined, {});
+    _this.state = props.reducer(props.initialState, {});
 
     _this.rx = new __WEBPACK_IMPORTED_MODULE_0_rxjs__["Subject"]().switchMap(function (payload) {
       return __WEBPACK_IMPORTED_MODULE_0_rxjs__["Observable"].merge.apply(__WEBPACK_IMPORTED_MODULE_0_rxjs__["Observable"], props.epics.map(function (f) {
@@ -160,7 +160,7 @@ var ContextObservable = function (_React$Component) {
 
     _this.rx.subscribe(function (a) {
       var newState = _this.props.reducer(_this.state, a);
-      _this.setState(newState);
+      _this.setState(newState, _this.props.onSetState);
     });
     return _this;
   }
@@ -168,7 +168,10 @@ var ContextObservable = function (_React$Component) {
   ContextObservable.prototype.render = function render() {
     return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(
       Provider,
-      { value: { state: this.state, dispatch: this.dispatch } },
+      {
+        contextObservable: true,
+        value: { state: this.state, dispatch: this.dispatch }
+      },
       this.props.children
     );
   };
@@ -177,7 +180,9 @@ var ContextObservable = function (_React$Component) {
 }(__WEBPACK_IMPORTED_MODULE_1_react___default.a.Component);
 
 ContextObservable.defaultProps = {
-  epics: [],
+  epics: [function ($a) {
+    return $a;
+  }],
   reducer: function reducer(state) {
     return state;
   }
